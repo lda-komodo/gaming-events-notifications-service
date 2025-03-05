@@ -11,9 +11,8 @@ public class GameEventsNotificationsAppConfig {
 
     @Bean
     public ListenersLoggingAspect listenersLoggingAspect() {
-        ListenersLoggingAspect listenersLoggingAspect = new ListenersLoggingAspect();
         // Configure properties of the aspect here
-        return listenersLoggingAspect;
+        return new ListenersLoggingAspect();
     }
 
 
