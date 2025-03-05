@@ -7,7 +7,7 @@ import pro.kmdo.game.notification.adapter.kafka.ListenersLoggingAspect;
 
 @Configuration
 @EnableAspectJAutoProxy
-public class AppConfig {
+public class GameEventsNotificationsAppConfig {
 
     @Bean
     public ListenersLoggingAspect listenersLoggingAspect() {
