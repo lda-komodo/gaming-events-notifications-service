@@ -1,4 +1,4 @@
-package pro.komodo.codechallenges.gamingeventsnotificationsservice.adapter.kafka.config;
+package pro.kmdo.game.notification.adapter.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.slf4j.Logger;
@@ -13,7 +13,6 @@ import org.springframework.kafka.core.KafkaAdmin;
 import org.springframework.kafka.support.converter.JsonMessageConverter;
 import org.springframework.kafka.support.converter.RecordMessageConverter;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
-import pro.komodo.codechallenges.gamingeventsnotificationsservice.adapter.kafka.GamingPlatformEventsTopics;
 
 import java.util.Arrays;
 
@@ -36,10 +35,10 @@ public class KafkaListenerConfig implements KafkaListenerConfigurer {
 
     @Bean
     public KafkaAdmin.NewTopics newTopics() {
-        logger.info("Topics: {}", Arrays.toString(GamingPlatformEventsTopics.values()));
+        logger.info("Topics: {}", Arrays.toString(EventsTopics.values()));
 
         return new KafkaAdmin.NewTopics(
-                Arrays.stream(GamingPlatformEventsTopics.values())
+                Arrays.stream(EventsTopics.values())
                         .map(topicName -> TopicBuilder.name(topicName.toString()).build())
                         .toArray(NewTopic[]::new));
     }

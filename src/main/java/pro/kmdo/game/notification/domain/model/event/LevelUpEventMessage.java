@@ -1,4 +1,4 @@
-package pro.komodo.codechallenges.gamingeventsnotificationsservice.domain.model.event;
+package pro.kmdo.game.notification.domain.model.event;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,10 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@ToString(callSuper = true)
-@NoArgsConstructor
-@AllArgsConstructor(onConstructor_ = {@JsonCreator})
-public class LevelUpEventPayload extends BaseGamingEvent {
+@ToString()
+public class LevelUpEventMessage {
 
     @Positive
     @JsonProperty
