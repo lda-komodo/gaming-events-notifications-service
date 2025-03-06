@@ -1,4 +1,4 @@
-package pro.kmdo.game.notification.adapter.kafka;
+package pro.kmdo.gamenotification.adapter.kafka;
 
 public enum EventsTopics {
     PLAYER_LEVEL_UP("gaming.player.level.up"),

@@ -1,4 +1,4 @@
-package pro.kmdo.game.notification;
+package pro.kmdo.gamenotification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

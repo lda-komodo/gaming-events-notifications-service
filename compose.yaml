@@ -25,6 +25,7 @@ services:
   kafka:
     image: 'confluentinc/cp-kafka:latest'
     hostname: kafka
+    restart: always
     depends_on:
       - zookeeper
     environment:

@@ -1,4 +1,4 @@
-package pro.kmdo.game.notification.adapter.kafka;
+package pro.kmdo.gamenotification.adapter.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.slf4j.Logger;
