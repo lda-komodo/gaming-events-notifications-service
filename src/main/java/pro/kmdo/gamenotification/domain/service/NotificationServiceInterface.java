@@ -1,5 +1,5 @@
 package pro.kmdo.gamenotification.domain.service;
 
-public interface NotificationServiceInterface<T> {
-	T processUserNotifications(T notification);
+public interface NotificationServiceInterface<Notification> {
+	Notification processUserNotifications(Notification notification);
 }

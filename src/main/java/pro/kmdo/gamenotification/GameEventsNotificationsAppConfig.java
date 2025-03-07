@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import pro.kmdo.gamenotification.adapter.kafka.ListenersLoggingAspect;
 import pro.kmdo.gamenotification.application.ApplicationLoggingAspect;
+import pro.kmdo.gamenotification.domain.DomainLoggingAspect;
 
 @Configuration
 @EnableAspectJAutoProxy
@@ -19,6 +20,11 @@ public class GameEventsNotificationsAppConfig {
 	@Bean
 	public ApplicationLoggingAspect applicationLoggingAspect() {
 		return new ApplicationLoggingAspect();
+	}
+	
+	@Bean
+	public DomainLoggingAspect domainLoggingAspect() {
+		return new DomainLoggingAspect();
 	}
 	
 	

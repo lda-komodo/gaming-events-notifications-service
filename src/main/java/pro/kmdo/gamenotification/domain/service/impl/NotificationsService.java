@@ -8,8 +8,6 @@ import pro.kmdo.gamenotification.domain.service.NotificationServiceInterface;
 public class NotificationsService implements NotificationServiceInterface<Notification> {
 	@Override
 	public Notification processUserNotifications(Notification notification) {
-		
-		//TODO: Update notification id and others...
 		return notification;
 	}
 }
