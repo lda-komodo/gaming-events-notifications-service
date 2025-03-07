@@ -5,7 +5,7 @@ import pro.kmdo.gamenotification.domain.model.notification.Notification;
 import pro.kmdo.gamenotification.domain.service.NotificationServiceInterface;
 
 @Service
-public class NotificationsService implements NotificationServiceInterface {
+public class NotificationsService implements NotificationServiceInterface<Notification> {
 	@Override
 	public Notification processUserNotifications(Notification notification) {
 		

@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @ToString(callSuper = true)
 public class LevelUpEventMessage extends AbstractEventMessage {
-
+    
     @Positive
     @JsonProperty
     int newLevel;

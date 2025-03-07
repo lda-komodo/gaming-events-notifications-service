@@ -18,5 +18,5 @@ public class ItemAcquiredEventMessage extends AbstractEventMessage {
     public ItemAcquiredEventMessage() {
         super(EventMessageType.ITEM_ACQUIRED);
     }
-    
+	
 }

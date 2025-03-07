@@ -8,15 +8,15 @@ import lombok.ToString;
 
 @ToString(callSuper = true)
 public class ChallengeCompletedEventMessage extends AbstractEventMessage {
-    
-    @NotNull
-    @NotEmpty
-    @NotBlank
-    @JsonProperty
-    String challengeName;
-    
-    public ChallengeCompletedEventMessage() {
-        super(EventMessageType.CHALLENGE_COMPLETED);
-    }
-    
+	
+	@NotNull
+	@NotEmpty
+	@NotBlank
+	@JsonProperty
+	String challengeName;
+	
+	public ChallengeCompletedEventMessage() {
+		super(EventMessageType.CHALLENGE_COMPLETED);
+	}
+	
 }

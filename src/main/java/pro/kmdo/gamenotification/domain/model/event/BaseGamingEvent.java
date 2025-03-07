@@ -14,24 +14,24 @@ import org.hibernate.validator.constraints.UUID;
 @AllArgsConstructor()
 @ToString
 public class BaseGamingEvent<T> {
-
-    @UUID(allowNil = false, version = 4, letterCase = UUID.LetterCase.INSENSITIVE)
-    @JsonProperty
-    @Getter
-    String messageId;
-
-    @Email
-    @JsonProperty
-    @Getter
-    String userId;
-
-    @Positive
-    @JsonProperty
-    @Getter
-    long timestamp;
-
-    @Valid
-    @JsonProperty
-    @Getter
-    T eventMessage;
+	
+	@UUID(allowNil = false, version = 4, letterCase = UUID.LetterCase.INSENSITIVE)
+	@JsonProperty
+	@Getter
+	String messageId;
+	
+	@Email
+	@JsonProperty
+	@Getter
+	String userId;
+	
+	@Positive
+	@JsonProperty
+	@Getter
+	long timestamp;
+	
+	@Valid
+	@JsonProperty
+	@Getter
+	T eventMessage;
 }

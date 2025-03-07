@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class GameEventsNotificationsApp {
-
-    public static void main(String[] args) {
-        SpringApplication.run(GameEventsNotificationsApp.class, args);
-    }
-
+	
+	public static void main(String[] args) {
+		SpringApplication.run(GameEventsNotificationsApp.class, args);
+	}
+	
 }

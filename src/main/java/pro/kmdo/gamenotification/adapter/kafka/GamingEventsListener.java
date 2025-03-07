@@ -2,7 +2,6 @@ package pro.kmdo.gamenotification.adapter.kafka;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
@@ -10,13 +9,13 @@ import pro.kmdo.gamenotification.domain.model.event.*;
 import pro.kmdo.gamenotification.domain.port.inbound.ProcessEventUserNotifications;
 
 @Component
-@AllArgsConstructor(onConstructor_ = {@Autowired})
+@AllArgsConstructor
 public class GamingEventsListener {
     
-    ProcessEventUserNotifications<BaseGamingEvent<LevelUpEventMessage>> processLevelUpUseCase;
-    ProcessEventUserNotifications<BaseGamingEvent<ItemAcquiredEventMessage>> processItemAcquiredUseCase;
-    ProcessEventUserNotifications<BaseGamingEvent<ChallengeCompletedEventMessage>> processChallengeCompletedEventMessageUseCase;
-    ProcessEventUserNotifications<BaseGamingEvent<PvPEventMessage>> processPvPEventMessageUseCase;
+    private final ProcessEventUserNotifications<BaseGamingEvent<LevelUpEventMessage>> processLevelUpUseCase;
+    private final ProcessEventUserNotifications<BaseGamingEvent<ItemAcquiredEventMessage>> processItemAcquiredUseCase;
+    private final ProcessEventUserNotifications<BaseGamingEvent<ChallengeCompletedEventMessage>> processChallengeCompletedEventMessageUseCase;
+    private final ProcessEventUserNotifications<BaseGamingEvent<PvPEventMessage>> processPvPEventMessageUseCase;
     
     @KafkaListener(
             topics = "#{T(pro.kmdo.gamenotification.adapter.kafka.EventsTopics).PLAYER_LEVEL_UP.toString()}")
@@ -29,7 +28,7 @@ public class GamingEventsListener {
     public void handleItemAcquiredEvent(@Payload @Valid BaseGamingEvent<ItemAcquiredEventMessage> event) {
         processItemAcquiredUseCase.execute(event);
     }
-
+    
     @KafkaListener(
             topics = "#{T(pro.kmdo.gamenotification.adapter.kafka.EventsTopics).CHALLENGE_COMPLETED.toString()}")
     public void handleChallengeCompletedEvent(@Payload @Valid BaseGamingEvent<ChallengeCompletedEventMessage> event) {

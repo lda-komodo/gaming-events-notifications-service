@@ -9,17 +9,17 @@ import pro.kmdo.gamenotification.application.ApplicationLoggingAspect;
 @Configuration
 @EnableAspectJAutoProxy
 public class GameEventsNotificationsAppConfig {
-
-    @Bean
-    public ListenersLoggingAspect listenersLoggingAspect() {
-        // Configure properties of the aspect here
-        return new ListenersLoggingAspect();
-    }
-    
-    @Bean
-    public ApplicationLoggingAspect applicationLoggingAspect() {
-        return new ApplicationLoggingAspect();
-    }
-
-
+	
+	@Bean
+	public ListenersLoggingAspect listenersLoggingAspect() {
+		// Configure properties of the aspect here
+		return new ListenersLoggingAspect();
+	}
+	
+	@Bean
+	public ApplicationLoggingAspect applicationLoggingAspect() {
+		return new ApplicationLoggingAspect();
+	}
+	
+	
 }
