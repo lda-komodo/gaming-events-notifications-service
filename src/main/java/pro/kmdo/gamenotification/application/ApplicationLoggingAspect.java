@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 public class ApplicationLoggingAspect {
 	private static final Logger logger = LoggerFactory.getLogger(ApplicationLoggingAspect.class);
 	
-	@Around("execution(* pro.kmdo.gamenotification.application.use_case.AbstractBaseUseCase.execute(..))")
+	@Around("execution(* pro.kmdo.gamenotification.application.use_case.ProcessEventBaseUseCase.execute(..))")
 	public Object logEvent(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		logger.info("Entering method: {} with arguments: {}", proceedingJoinPoint.getSignature(), proceedingJoinPoint.getArgs());
 		Object result = proceedingJoinPoint.proceed();

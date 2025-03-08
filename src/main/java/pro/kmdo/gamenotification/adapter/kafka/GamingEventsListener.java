@@ -18,7 +18,7 @@ public class GamingEventsListener {
     private final ProcessEventUserNotifications<BaseGamingEvent<PvPEventMessage>> processPvPEventMessageUseCase;
     
     @KafkaListener(
-            topics = "#{T(pro.kmdo.gamenotification.adapter.kafka.EventsTopics).PLAYER_LEVEL_UP.toString()}")
+            topics = "gaming.level-up.topic")
     public void handleLevelUpEvent(@Payload @Valid BaseGamingEvent<LevelUpEventMessage> event) {
         processLevelUpUseCase.execute(event);
     }

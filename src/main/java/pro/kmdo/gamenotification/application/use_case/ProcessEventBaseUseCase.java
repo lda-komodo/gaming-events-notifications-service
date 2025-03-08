@@ -5,12 +5,12 @@ import pro.kmdo.gamenotification.domain.model.notification.Notification;
 import pro.kmdo.gamenotification.domain.port.inbound.ProcessEventUserNotifications;
 import pro.kmdo.gamenotification.domain.service.NotificationServiceInterface;
 
-public abstract class AbstractBaseUseCase<T> implements ProcessEventUserNotifications<T> {
+public abstract class ProcessEventBaseUseCase<T> implements ProcessEventUserNotifications<T> {
 	
 	NotificationServiceInterface<Notification> notificationService;
 	
 	@Autowired
-	public AbstractBaseUseCase(NotificationServiceInterface<Notification> notificationService) {
+	public ProcessEventBaseUseCase(NotificationServiceInterface<Notification> notificationService) {
 		this.notificationService = notificationService;
 	}
 	
